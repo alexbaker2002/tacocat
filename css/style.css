@@ -52,6 +52,7 @@ body {
     bottom: 0;
     position: absolute;
     width: 100%;
+    min-height:4em;
 }
 
 .footer .social>a {

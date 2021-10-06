@@ -57,9 +57,9 @@
         <div class="container col-xxl-8 px-4 py-5 mt-5">
             <h1>The Code Page</h1>
             <hr>
-            <div class="container codeContainer">
+            <div class="container ">
                 <div class="row row-cols-1 row-cols-lg-1 row-cols-xl-2 ">
-                    <div class="col-lg-8 col-md-12">
+                    <div class="col-lg-8 col-md-12 codeContainer">
                         <pre class="line-numbers">
                 <code class="language-js">
 function getUserString() {
@@ -143,10 +143,12 @@ function displayData(result) {
             </pre>
 
                     </div>
-                    <div class="col-lg-4 col-md-12 gy-3">
-                        <p>The code is structured in one function.</p>
-                        <h5>...()</h5>
-                        <p>&nbsp;Prints out your message!</p>
+                    <div class="col-lg-4 col-md-12 gy-3 codeContainer">
+                        <p>The code is in multiple functions.</p>
+                        <h5>getUserString()</h5>
+                        <p class="offset-1">&nbsp;Main function and fires on the button click.</p>
+                        <h5>getUserString()</h5>
+                        <p class="offset-1">&nbsp;Main function and fires on the button click.</p>
                     </div>
                 </div>
             </div>

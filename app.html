@@ -54,19 +54,36 @@
     </nav>
     <main id="content" class="flex-shrink-0">
         <div class="container">
+            <div class="row row-cols-1">
+                <div class="col col-md-6">
+                    <h1>TacoCat: A Coding Project Using JavaScript</h1>
+                    <p>This project reverses a string and checks to see if it is a palindrome. All special characters are removed using RegEx.</p>
+                </div>
+                <div class="col col-md-6">
+                    <h5 class="border-bottom border-dark border-2">Enter a string to reverse.</h5>
+                    <form class="row gx-3 gy-2">
+                        <div class="col-12">
+                            <input type="text" id="userString" class="form-control" required
+                                placeholder="Enter more than 2 characters" />
+                        </div>
+                        <div class="col-12">
+                            <button type="button" id="btnSubmit" class="btn btn-danger">Reverse!</button>
+                        </div>
+                    </form>
+                    <hr />
+                    <div class="resultsContainer">
+                        <h3 class="border-bottom border-dark border-3">Results</h3>
+                        <div class="table-responsive tableContainer">
+                            <table class="table table-striped table-sm">
+                                <tbody id="results">
+                                    <!--Content goes here-->
 
-            <h1>The App UI Goes Here</h1>
-
-            <input id="message" type="text" placeholder="Enter a message" required>
-            <button id="btnSubmit" type="button" class="btn btn-dark">Display Message</button>
-
-
-
-
-            </form>
-
-
-
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -100,7 +117,19 @@
 
         </div>
     </footer>
-
+    <!--Template  for results  table-->
+    <template id="tableTemplate">
+        <tr>
+            <th class="text-center">User String</th>
+            <th class="text-center">Reversed String</th>
+            <th class="text-center">Palindrome?</th>
+        </tr>
+        <tr>
+            <td class="userInput text-center"></td>
+            <td class="reversedString text-center"></td>
+            <td class="isPalindrome text-center"></td>
+        </tr>
+    </template>
     <!-- sripts    Bootstrap 5.1.1-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
@@ -108,9 +137,9 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/site.js"></script>
     <script>
-        document.getElementById('btnSubmit').addEventListener("click", displayMessage)
+        document.getElementById('btnSubmit').addEventListener("click", getUserString)
     </script>
-    
+
 </body>
 
 

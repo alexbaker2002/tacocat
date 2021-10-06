@@ -93,3 +93,7 @@ body {
 .checkList>li i{
     color: var(--secondary-color);
 }
+.codeContainer {
+    overflow-y: scroll;
+    height: 35vh;
+}

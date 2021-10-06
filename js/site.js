@@ -55,9 +55,7 @@ function comparedStrings(userString, revString) {
 
 function isPalindrome(userString, revString) {
   let bool = true;
-
   revString.split('').some((l, i) => {
-
     if (bool === true) {
       let a = userString.charAt(i);
       let b = revString.charAt(i);
@@ -82,6 +80,5 @@ function displayData(result) {
   rowCols[1].textContent = result.rev.toUpperCase();;
   // was it a palindrome
   rowCols[2].textContent = result.pal ? "PALINDROME" : "Not a Palindrome";
-
   tableBody.appendChild(tableRow);
 }

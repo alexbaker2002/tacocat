@@ -28,15 +28,7 @@ function getUserString() {
 
 function reverseString(str) {
   // declare new string
-  let reversedStr = "";
-
-  let start = str.length - 1
-  let end = 0
-
-  // concat an new string with char in reverse
-  for (let i = start; i >= end; i--) {
-    reversedStr += str[i];
-  }
+  let reversedStr = str.split('').reverse().join("");
 
   return reversedStr;
 }

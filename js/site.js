@@ -11,7 +11,7 @@ function getUserString() {
     return;
   }
   // use RegEx to remove special char 
-  let filteredUserString = userString.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+  let filteredUserString = userString.replace(/[^A-Z0-9]/ig, '');
   // normalize the case
   let casedFilteredUserString = filteredUserString.toLowerCase();
 
@@ -73,4 +73,5 @@ function displayData(result) {
   // was it a palindrome
   rowCols[2].textContent = result.pal ? "PALINDROME" : "Not a Palindrome";
   tableBody.appendChild(tableRow);
+  if (result.pal) Swal.fire("You've Entered a Palindrome!!")
 }

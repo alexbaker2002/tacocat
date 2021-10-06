@@ -1,1 +1,1 @@
-Template for JS HTML Projects
+Taco Cat : A JavaScript Coding Challenge
